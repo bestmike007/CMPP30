@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3418751C-0241-4F5D-B659-9E6FD797357A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Reefoo.CMPP30</RootNamespace>
+    <AssemblyName>Reefoo.CMPP30</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Reefoo.CMPP30.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cmpp30ClientStatus.cs" />
+    <Compile Include="Cmpp30Configuration.cs" />
+    <Compile Include="Cmpp30Client.cs" />
+    <Compile Include="Cmpp30Transport.cs" />
+    <Compile Include="CmppConstants.cs" />
+    <Compile Include="Cmpp30SendStatus.cs" />
+    <Compile Include="Message\CmppActiveTestResp.cs" />
+    <Compile Include="Message\CmppCancel.cs" />
+    <Compile Include="Message\CmppCancelResp.cs" />
+    <Compile Include="Message\CmppConnect.cs" />
+    <Compile Include="Message\CmppConnectResp.cs" />
+    <Compile Include="Message\CmppDeliver.cs" />
+    <Compile Include="Message\CmppDeliverResp.cs" />
+    <Compile Include="Message\CmppHead.cs" />
+    <Compile Include="Message\CmppReport.cs" />
+    <Compile Include="Message\CmppSubmit.cs" />
+    <Compile Include="Message\CmppSubmitResp.cs" />
+    <Compile Include="Convert.cs" />
+    <Compile Include="ICmppMessage.cs" />
+    <Compile Include="Message\CmppActiveTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BackgroundThread.cs" />
+    <Compile Include="EventArgs.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
